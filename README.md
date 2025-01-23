@@ -3,107 +3,99 @@ En este repositorio se encuentra la gestión de un sistema de información para 
 
 Sistema de Información de Licorería: "La Botella Infinita"
 
-# Proyecto: Práctica de Inteligencia de Negocio - "Análisis Predictivo mediante Clasificación"
+# Sistema de Información de Licorería: "La Botella Infinita"
 
 ## Descripción General
 
-Este proyecto tiene como objetivo aplicar diferentes algoritmos de aprendizaje automático para resolver problemas de clasificación en tres casos específicos:
+"La Botella Infinita" es un sistema de información diseñado para optimizar y gestionar de manera eficiente las operaciones clave de una licorería. Este sistema modular se compone de cinco subsistemas principales, cada uno encargado de un área específica del negocio.
 
-1. **Predicción de aprobación de créditos:** Determinar si un crédito será aprobado o no basado en datos demográficos y financieros de los solicitantes.
-2. **Predicción de una segunda cita:** Identificar si los participantes de citas rápidas decidirán tener una segunda cita.
-3. **Predicción del tipo de enfermedad eritemato-escamosa:** Diagnosticar enfermedades basadas en características clínicas e histopatológicas.
-
-Cada problema aborda un conjunto de datos específico y aplica algoritmos de clasificación avanzados para encontrar patrones y generar predicciones precisas.
-
----
-
-## Problemas Resueltos
-
-### Problema 1: Predicción de Aprobación de Créditos
-
-- **Objetivo:** Predecir si un crédito será aprobado o no.
-- **Conjunto de Datos:** 32,581 instancias con 12 variables.
-- **Tratamiento de Datos:**
-  - Imputación de valores faltantes (mediana, moda y media).
-  - Eliminación de valores anómalos.
-  - Ajuste de desbalanceo de clases.
-- **Algoritmos Utilizados:**
-  - Árbol de Decisión
-  - Random Forest
-  - K-Nearest Neighbors (k-NN)
-  - Stochastic Gradient Descent (SGD)
-  - Naive Bayes
-- **Resultados:** Random Forest obtuvo el mejor desempeño con un AUC de 0.937 y F1-Score de 0.827.
-
-### Problema 2: Predicción de una Segunda Cita
-
-- **Objetivo:** Predecir si habrá una segunda cita entre participantes de citas rápidas.
-- **Conjunto de Datos:** 8,378 instancias con 121 variables.
-- **Tratamiento de Datos:**
-  - Imputación de valores faltantes.
-  - Escalado de variables sensibles a la escala (min-max normalization).
-  - Ajuste de desbalanceo de clases.
-- **Algoritmos Utilizados:**
-  - Árbol de Decisión
-  - Random Forest
-  - Gradient Boosted Trees
-  - K-Nearest Neighbors (k-NN)
-  - Stochastic Gradient Descent (SGD)
-  - Naive Bayes
-- **Resultados:** Gradient Boosted Trees demostró ser el más efectivo para este problema.
-
-### Problema 3: Predicción del Tipo de Enfermedad Eritemato-Escamosa
-
-- **Objetivo:** Diagnosticar el tipo de enfermedad basándose en 34 características (12 clínicas y 22 histopatológicas).
-- **Conjunto de Datos:** Incluye 6 clases de enfermedades.
-- **Tratamiento de Datos:**
-  - Normalización de variables.
-  - Análisis de relevancia de atributos.
-  - Reducción de dimensionalidad en pruebas.
-- **Algoritmos Utilizados:**
-  - Random Forest
-  - Naive Bayes
-  - SGD
-  - Árbol de Decisión
-  - k-NN
-- **Resultados:** Random Forest proporcionó la mejor clasificación, demostrando alta capacidad predictiva y robustez.
+El sistema permite:
+- Controlar inventarios asegurando la disponibilidad de productos.
+- Gestionar ventas, incluyendo facturación y promociones.
+- Realizar un seguimiento detallado de los clientes.
+- Optimizar la relación con proveedores.
+- Generar informes y análisis para apoyar la toma de decisiones.
 
 ---
 
-## Tecnologías y Herramientas Utilizadas
+## Tabla de Contenidos
+- [Descripción General](#descripción-general)
+- [Subsistemas](#subsistemas)
+  - [Gestión de Inventario](#subsistema-de-gestión-de-inventario)
+  - [Gestión de Ventas](#subsistema-de-gestión-de-ventas)
+  - [Gestión de Clientes](#subsistema-de-gestión-de-clientes)
+  - [Gestión de Proveedores](#subsistema-de-gestión-de-proveedores)
+  - [Informes y Análisis](#subsistema-de-informes-y-análisis)
+- [Requisitos del Sistema](#requisitos-del-sistema)
+- [Contribuciones](#contribuciones)
+- [Licencia](#licencia)
 
-- **KNIME Analytics Platform:** Para el preprocesamiento y la aplicación de algoritmos de clasificación.
-- **Lenguaje de Programación:** Soporte para Python y R en análisis adicionales.
-- **Documentación:** Secciones detalladas en el PDF sobre configuración, flujos de trabajo y resultados obtenidos.
+---
+
+## Subsistemas
+
+### Subsistema de Gestión de Inventario
+Permite gestionar los productos disponibles en el inventario:
+- **RF1.1:** Registrar nuevos productos.
+- **RF1.2:** Actualizar el stock de productos existentes.
+- **RF1.3:** Consultar el estado del inventario.
+- **RF1.4:** Generar alertas por bajo stock.
+- **RF1.5:** Eliminar productos descatalogados.
+
+### Subsistema de Gestión de Ventas
+Gestiona el ciclo completo de ventas:
+- **RF2.1:** Registrar ventas realizadas.
+- **RF2.2:** Generar facturas y recibos.
+- **RF2.3:** Aplicar descuentos y promociones.
+- **RF2.4:** Consultar historial de ventas.
+- **RF2.5:** Gestionar devoluciones.
+
+### Subsistema de Gestión de Clientes
+Facilita la administración de los datos y el seguimiento de los clientes:
+- **RF3.1:** Registrar nuevos clientes.
+- **RF3.2:** Consultar el historial de compras de clientes.
+- **RF3.3:** Actualizar información de los clientes.
+- **RF3.4:** Enviar notificaciones (vía email o SMS).
+- **RF3.5:** Eliminar clientes inactivos.
+
+### Subsistema de Gestión de Proveedores
+Optimiza la gestión de proveedores y pedidos:
+- **RF4.1:** Registrar nuevos proveedores.
+- **RF4.2:** Realizar y gestionar pedidos.
+- **RF4.3:** Consultar el historial de pedidos a proveedores.
+- **RF4.4:** Cancelar pedidos pendientes.
+- **RF4.5:** Marcar pedidos como completados.
+- **RF4.6:** Eliminar proveedores inactivos.
+
+### Subsistema de Informes y Análisis
+Proporciona herramientas de análisis avanzado para la toma de decisiones:
+- **RF5.1:** Generar informes de ventas por intervalos de tiempo.
+- **RF5.2:** Analizar productos más vendidos.
+- **RF5.3:** Evaluar ingresos por producto.
+- **RF5.4:** Crear informes de pedidos realizados.
+- **RF5.5:** Analizar ventas por categorías de productos.
 
 ---
 
 ## Requisitos del Sistema
 
-- **Software:**
-  - KNIME 4.6 o superior.
-  - Python 3.x (para extensiones opcionales).
-- **Hardware:**
-  - Procesador con al menos 4 núcleos.
-  - 8 GB de RAM (16 GB recomendados para grandes volúmenes de datos).
+- **Lenguaje de programación:** A definir según la implementación.
+- **Base de datos:** Se recomienda un sistema que soporte integridad referencial (por ejemplo, MySQL o PostgreSQL).
+- **Configuración mínima del servidor:**
+  - Procesador de 4 núcleos.
+  - 8 GB de RAM.
+  - Almacenamiento adecuado para el volumen de datos del negocio.
 
 ---
 
 ## Contribuciones
 
-Contribuciones son bienvenidas. Para colaborar:
-1. Crea un fork del repositorio.
-2. Realiza tus modificaciones.
-3. Envía un pull request detallando los cambios.
+Contribuciones al proyecto son bienvenidas. Para colaborar:
+1. Realiza un fork del repositorio.
+2. Crea una rama con tus cambios.
+3. Envía un pull request detallando las modificaciones realizadas.
 
 ---
 
-## Licencia
-
-Este proyecto está licenciado bajo la [MIT License](LICENSE).
-
----
-
-Si necesitas más detalles sobre los flujos de trabajo o los resultados, consulta el documento principal o contáctame directamente.
 
 
