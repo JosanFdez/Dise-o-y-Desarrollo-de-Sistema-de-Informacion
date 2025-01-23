@@ -28,7 +28,6 @@ El sistema permite:
   - [Informes y Análisis](#subsistema-de-informes-y-análisis)
 - [Requisitos del Sistema](#requisitos-del-sistema)
 - [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
 
 ---
 
